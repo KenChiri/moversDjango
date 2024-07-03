@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movers-Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/logpage.css' %}">
+</head>
+<body> 
+
+<div class="main">
+            
+
+        <div class="signin" style="border-radius: 10px">
+            <div class="logelements">
+
+                <h2>Glad You're Back</h2>
+                <h1>Log In</h1>
+                <form action="{% url 'login' %}" method="post" id="login-form">
+                    {% csrf_token %}
+                    {% for message in messages %}
+                    <div class="alert {% if message.tags == 'error' %}alert-danger{% elif message.tags == 'success' %}alert-success{% endif %}" role="alert">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                    <label for="email">Email Address/Username: </label><br>
+                    <input type="text" name="credentials" placeholder="username'Pawi' or Email" id="details"><br>
+                    <label for="password">Password</label><br>
+                    <input type="password" name="pwd" id="pwd"><br>
+                    <br>
+
+                    <div id="errors"></div>
+                    <br>
+                    <button type="submit" name="login">Sign In</button>
+
+                </form>
+                <br>
+                <a href="verifyMail">Forgot password?</a><br>
+                First time here?<a href="signup">Create an account</a> <br>
+            </div>
+        </div>
+</div>
+<script>
+const loginForm = document.getElementById( "login-form" );
+const errorElement = document.getElementById('errors');
+
+loginForm.addEventListener('submit', (event) => {
+    const logInfo = document.getElementById('details').value;
+    const password = document.getElementById('pwd').value;
+
+    //Clear previous error messages
+    errorElement.innerHTML = "";
+
+    let messages =  [];
+
+    if(logInfo == "" || password == ""){
+        messages.push("Fields cannot be empty.")
+    }
+
+    if (messages.length > 0) {
+        // Display error messages
+        errorElement.innerHTML = messages.join(', ');
+        errorElement.classList.add('error-message');
+        errorElement.style.display = 'block';
+        event.preventDefault(); // Prevent form submission
+    }
+});
+
+</script>   
+</body>
+</html>

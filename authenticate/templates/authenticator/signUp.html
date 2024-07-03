@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movers-SignUp</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/logpage.css' %}">
+</head>
+<body> 
+<div class="container">
+
+            
+            <div id="step1">
+                <div class="logelements">
+                        <h2 class="head">Create an Account</h2>
+                        <h1 >Sign Up</h1>
+
+
+                        <form action="/signup" method="post" name="signupForm" id="signupForm">
+                            {% csrf_token %}
+                            {% for message in messages %}
+                            <div class="alert {% if message.tags == 'error' %}alert-danger{% elif message.tags == 'success' %}alert-success{% endif %}" role="alert">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                           
+                            <label for="fname">Enter your first name:</label><br>
+                            <input type="text" name="fname" id="fname" placeholder="Pawi"><br>
+                            <p class="error fname-error"></p>
+                    
+                            <label for="lname">Enter your second name:</label><br>
+                            <input type="text" name="lname" id="lname" placeholder="Fortune" ><br>
+                            <p class="error lname-error"></p>
+
+                            
+                            <label for="userId">Enter a preferred User Name:</label><br>
+                            <input type="text" name="userId" id="userId"><br>
+                            <p class="error userId-error"></p>
+
+                    
+                            <label for="email">Email address:</label><br>
+                            <input type="email" name="email" id="email" placeholder="user@example.com"><br>
+                            <p class="error email-error"></p>
+
+                            <label for="pwd">Create Password:</label><br>
+                            <input type="password" name="pwd" id="pwd"><br>
+                            <p class="error pwd-error"></p>
+    
+                    
+                            <label for="pwdRepeat">Rewrite your Password:</label><br>
+                            <input type="password" name="pwdRepeat" id="pwdRepeat"><br>
+                            <p class="error pwdRepeat-error"></p>
+                            <br>
+
+
+                           <div id="errors">
+
+                           </div>
+                            <br>
+
+                    
+                           
+                    
+                            <button type="submit" name="signup" id="signUp">Sign Up</button>
+                        </form>
+                        <br>
+                    Already have an account? <a href="login">Sign In</a>
+             </div>
+               
+                
+            </div>
+               <div class="signUp slideshow">
+                <div class="motto">
+                    <h1>Welcome to <a href="" class="name">MOVERS</a> , <br> association
+                    wherever whenever we move you home. <br></h1>
+                </div>
+  
+            </div>
+</div>
+<script defer src="{% static 'js/script.js' %}"></script> 
+ 
+</body>
+</html>

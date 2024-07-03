@@ -1,0 +1,171 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movers Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="{% static 'css/infostyles.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <div class="all">
+        <nav id="navbar">
+            <ul>
+                <li>Home</li>
+                <li>Community</li>
+                <li id="abtUs">About Us</li>
+                <li>Support</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+        <div class="welcome">
+            <div class="container">
+                <div class="content" data-aos="fade-right" data-aos-delay="100">
+                    <h1 class="word">Welcome to <a href="" class="accu">Movers</a> , <br> make moving easy and fast with our <br>
+                    proffessional team. Leave it to us.</h1>
+                    <button type="submit" id="startMov">Start Moving <i class="fa-solid fa-phone-flip"></i></button> <button type="submit" name="getAppointment" id="toggleFormButton">Book Now</button>
+                </div>
+      
+
+            </div>
+               
+        </div>
+        <div class="userpage" >
+            <div class="userTitle" data-aos="fade-up" data-aos-delay="150">
+                <span class="lh">WELCOME ALL</span> <br>
+                <span class="dh">OUR SERVICES</span> <br>
+
+            </div>
+           
+  
+            
+
+            <div class="themes">
+              
+
+                <div class="up1">
+                    <h2>Home Cleaning</h2>
+                    
+    
+                </div>
+                <div class="up2">
+                    <h2>Install Appliances</h2>
+                    <p class="motto">
+                       
+                    </p>
+                </div>
+                <div class="up3">
+                    <h2>Other Goods Pickups</h2>
+                </div>
+                <div class="up4">
+                    <h2>Home Design</h2>
+
+                </div>
+                <div class="up5">
+                    <h2>Emergency Moving</h2>
+
+                </div>
+                <div class="up6">
+                    <h2>Boookings and Selections</h2>
+                </div>
+                
+
+            </div>
+            
+          
+
+
+            
+                
+
+
+        </div>
+        <div class="info" id="emergencyInfoSection">
+
+            <div class="contactInfo">
+               
+             
+
+            </div>
+           
+
+
+            
+        </div>
+        <div id="aboutUs">
+            <h2>About us</h2>
+            <p style="width: 30%; ">
+
+            </p>
+           
+
+
+        </div>
+</div>
+{% include 'footer.html' %}
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>AOS.init();</script>
+<script>
+    const listButtons = document.querySelectorAll('li');
+
+    listButtons.forEach(item => {
+        item.addEventListener('click', (event) => {
+            const link = item.querySelector('a');
+            if(link) {
+                window.location.href = link.href;
+            }
+
+        });
+        item.style.cursor = 'pointer';
+    });
+    function changeBg(){
+        var nav = document.getElementById('navbar');
+        var scrollval = window.scrollY;
+        if(scrollval < 150){
+            nav.classList.remove("navbar");
+        } else {
+            nav.classList.add("navbar");
+        }       
+    }
+    window.addEventListener('scroll', changeBg);
+
+    const emergencyInfoButton = document.getElementById('getInfo');
+
+    emergencyInfoButton.addEventListener('click', function() {
+    const emergencyInfoSection = document.getElementById('emergencyInfoSection');
+    emergencyInfoSection.scrollIntoView({ behavior: "smooth" });
+    })
+
+    const aboutUsLink = document.getElementById("abtUs");
+    aboutUsLink.addEventListener('click', function() {
+        const aboutUsSection = document.getElementById("aboutUs");
+        aboutUsSection.scrollIntoView({ behavior: "smooth" });
+    })
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const toggleFormButton = document.getElementById("toggleFormButton");
+    const emergencyForm = document.getElementById("emergencyReportForm");
+    const crimeForm = document.getElementById("crimeReportForm");
+
+    toggleFormButton.addEventListener("click", function () {
+        // Toggle between displaying emergency and crime forms
+        if (emergencyForm.style.display === "none") {
+            emergencyForm.style.display = "block";
+            crimeForm.style.display = "none";
+            toggleFormButton.textContent = "Report Crime";
+        } else {
+            emergencyForm.style.display = "none";
+            crimeForm.style.display = "block";
+            toggleFormButton.textContent = "Report Accident";
+        }
+    });
+});
+
+</script>
+    
+    
+</body>
+</html>
