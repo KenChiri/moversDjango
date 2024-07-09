@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Reset</title>
+    <link rel="stylesheet" href="{% static 'css/logpage.css' %}">
+</head>
+<body>
+    <div class="main">
+            
+
+        <div class="signin" style="border-radius: 10px">
+            <div class="logelements">
+
+                <h1>Email Verification</h1>
+                <h3>Enter email used to register your account</h3>
+                <form action="" method="post" id="emailVerification">
+                    {% csrf_token %}
+                    {% for message in messages %}
+                    <div class="alert {% if message.tags == 'error' %}alert-danger{% elif message.tags == 'success' %}alert-success{% endif %}" role="alert">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                    <label for="email">Enter your account email:  </label><br>
+                    <input type="email" name="credentials" placeholder="user123@gmail.com" id="email"><br>            
+                    <br>
+
+                    <div id="errors"></div>
+                    <br>
+                    <button type="submit" name="login" style="width: 120pt; ">Recive OTP</button>
+
+                </form>
+                <br>
+                Back to login page<a href="login">Login</a> <br>
+            </div>
+        </div>
+</div>
+<script>
+const loginForm = document.getElementById( "emailVerification" );
+const errorElement = document.getElementById('errors');
+
+loginForm.addEventListener('submit', (event) => {
+    //Prevent default submission which can cause double submission
+    event.preventDefault();
+
+    const email = document.getElementById('email').value;
+  
+
+
+    //Clear previos error messages
+    errorElement.innerHTML = "";
+
+    let messages =  [];
+
+    function validateEmail(email) {
+      var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(String(email).toLowerCase());//This will ensure the integrity of our database and the user won't be able to create an account if the email written is invalid
+    }
+    
+        
+    if(email == ""){
+        messages.push("Field is empty, please enter an email.")
+    }
+
+    if (!validateEmail(email)){
+      messages.push("Invalid email address");
+    }
+
+
+
+
+    if (messages.length === 0) {
+        loginForm.disabled = true; // Disable form to prevent accidental resubmission
+        setTimeout(() => {
+        loginForm.submit(); // Submit the form after a short delay
+        }, 1000); // Delay submission by 1 second
+    } else {
+        // Display error messages
+        errorElement.innerHTML = messages.join(', ');
+        errorElement.classList.add('error-message');
+        errorElement.style.display = 'block';
+        event.preventDefault(); // Prevent form submission
+    }
+
+
+
+
+});
+</script>   
+</body>
+</html>
+
+
+    
+</body>
+</html>

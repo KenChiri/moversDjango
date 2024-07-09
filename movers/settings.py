@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'authenticate',
     'moverhome',
+    'reviews'
 ]
 
 MIDDLEWARE = [

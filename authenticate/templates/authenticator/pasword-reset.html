@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Reset</title>
+    <link rel="stylesheet" href="{% static 'css/logpage.css' %}">
+</head>
+<body>
+    <div class="main">
+            
+
+        <div class="signin" style="border-radius: 10px">
+            <div class="logelements">
+
+                <h1>Password Reset</h1>
+                <h5>Create new Password</h5>
+                <form action="" method="post" id="pwdReset">
+                    {% csrf_token %}
+                    {% for message in messages %}
+                    <div class="alert {% if message.tags == 'error' %}alert-danger{% elif message.tags == 'success' %}alert-success{% endif %}" role="alert">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                    <label for="pwd">Create New Password:</label><br>
+                    <input type="password" name="new_pwd" id="pwd"><br>
+                    <br>
+                    <label for="pwdRepeat">Rewrite your New Password:</label><br>
+                    <input type="password" name="pwdRepeat" id="pwdRepeat"><br>
+                    <br>
+
+                    <div id="errors"></div>
+                    <br>
+                    <button type="submit" name="reset" style="width: 120pt; ">Reset Password</button>
+
+                </form>
+                <br>
+                Back to login page<a href="login">Login</a> <br>
+            </div>
+        </div>
+</div>
+<script>
+const loginForm = document.getElementById( "pwdReset" );
+const errorElement = document.getElementById('errors');
+
+loginForm.addEventListener('submit', (event) => {
+    //Prevent default submission which can cause double submission
+    event.preventDefault();
+
+
+    const password = document.getElementById('pwd').value;
+    const passwordRepeat = document.getElementById('pwdRepeat').value;
+
+
+
+    //Clear previos error messages
+    errorElement.innerHTML = "";
+
+    let messages =  [];
+
+
+    if(password == "" || passwordRepeat == ""){
+        messages.push("Fields cannot be empty.")
+    }
+
+    if (password !== passwordRepeat) {
+        messages.push("Passwords don't match");
+    }
+
+    if (messages.length === 0) {
+        loginForm.disabled = true; // Disable form to prevent accidental resubmission
+        setTimeout(() => {
+        loginForm.submit(); // Submit the form after a short delay
+        }, 1000); // Delay submission by 1 second
+    } else {
+        // Display error messages
+        errorElement.innerHTML = messages.join(', ');
+        errorElement.classList.add('error-message');
+        errorElement.style.display = 'block';
+        event.preventDefault(); // Prevent form submission
+    }
+
+
+
+
+});
+</script>   
+</body>
+</html>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,14 @@
+{% autoescape off %}
+
+ Welcome to Movers - Login!!
+    Password Reset Request
+    Hi {{ user.first_name }},
+    You requested a password reset for your Movers account.
+    To reset your password, please click the link below:
+    http://{{ domain }}{% url 'password-reset' uidb64=uid token=token %}
+    This link will expire in a certain amount of time (consider setting an expiry time for the token).
+    If you did not request a password reset, you can safely ignore this email.
+    Sincerely,
+    The Movers Team
+
+ {% endautoescape %}

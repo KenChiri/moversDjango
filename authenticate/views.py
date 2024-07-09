@@ -112,7 +112,7 @@ def user_login(request):
         else:
             messages.error(request, "Incorrect password")
 
-    return render(request, "authenticator/login.html")
+    return render(request, "authenticator/signIn.html")
 
 
 def index(request):
