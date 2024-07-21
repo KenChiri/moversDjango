@@ -36,7 +36,7 @@ signUpForm.addEventListener('submit', (event) => {
 
     
 
-    if (firstName === '' || lastName === '' || idNo === '' || policeNumber === '' || email === '' || userId === '' || password === '' || passwordRepeat === '') {
+    if (firstName === '' || lastName === ''|| email === '' || userId === '' || password === '' || passwordRepeat === '') {
         messages.push('All fields are required');
     }
 

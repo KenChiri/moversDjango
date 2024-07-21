@@ -50,8 +50,8 @@ def signup(request):
 
         messages.success(request, "Your account was created successfully. We will send you an email for activation.")
 
-        subject = "Welcome to AccuReport."
-        message = f"Hello {user.first_name},\n\nWelcome to AccuReport! Thank you for visiting our website. We have also sent you a confirmation email, please confirm that this is your email address.\n\nThank You\nTeam AccuReport"
+        subject = "Welcome to MOVERS."
+        message = f"Hello {user.first_name},\n\Thank you for visiting our website. We have sent you a confirmation email, please confirm that this is your email address.\n\nThank You\nTeam MOVERS"
         send_mail(subject, message, settings.EMAIL_HOST_USER, [user.email], fail_silently=True)
 
         current_site = get_current_site(request)
@@ -98,7 +98,7 @@ def user_login(request):
         user = authenticate(request, username=identification, password=password)
         if user is None:
             try:
-                user = User.objects.get(Q(email=identification) | Q(police_number=identification))
+                user = User.objects.get(Q(email=identification))
                 user = authenticate(request, username=user.username, password=password)
             except User.DoesNotExist:
                 messages.error(request, "No such user.")
