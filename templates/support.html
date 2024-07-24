@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Movers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="{% static 'css/supportstyles.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #1c1b1b;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #666;
+    border-radius: 5px;
+}
+
+.support {
+    padding: 80px 20px 50px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #1c1b1b;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #1c1b1b;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.faq {
+    margin-bottom: 40px;
+}
+
+.faq-item {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-support {
+    text-align: center;
+}
+
+.contact-support ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-support li {
+    margin-bottom: 10px;
+}
+
+.contact-support a {
+    color: #1c1b1b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-support a:hover {
+    color: #4CAF50;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-media {
+    margin-top: 10px;
+}
+
+footer .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+footer .social-media a:hover {
+    color: #4CAF50;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+    
+            <li><a href="home.html">Home</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="contact us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="support" class="support">
+        <div class="container">
+            <h1>Support Center</h1>
+            <p>Welcome to the Movers Support Center. Here, you will find answers to frequently asked questions, troubleshooting tips, and contact information for our support team.</p>
+            
+            <section class="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <h3>How can I track my order?</h3>
+                    <p>Once your order is dispatched, you will receive a tracking number via email. You can use this number on our tracking page to monitor the status of your order.</p>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                    <h3>What should I do if my item is damaged?</h3>
+                    <p>If you receive a damaged item, please contact our support team immediately with your order number and photos of the damaged item. We will assist you with the return or replacement process.</p>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <h3>How can I change or cancel my order?</h3>
+                    <p>To change or cancel your order, please contact our support team as soon as possible. Orders can be modified or canceled if they have not yet been processed.</p>
+                </div>
+            </section>
+
+            <section class="contact-support">
+                <h2>Contact Support</h2>
+                <p>If you have any other questions or need further assistance, please reach out to our support team through the following methods:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:support@movers.com">support@movers.com</a></li>
+                    <li><strong>Phone:</strong> <a href="tel:+1234567890">+123 456 7890</a></li>
+                    <li><strong>Live Chat:</strong> Available on our website from 9 AM to 9 PM</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <footer id="footer" class="footer">
+        <p>&copy; 2024 Movers. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#" class="fab fa-facebook"></a>
+<a href="#" class="fab fa-twitter"></a>
+<a href="#" class="fab fa-instagram"></a>
+<a href="#" class="fab fa-linkedin"></a>
+
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>
