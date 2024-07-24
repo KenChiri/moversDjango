@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Amita&family=Bubblegum+Sans&family=Caveat:wght@400;500&family=Lexend:wght@500&family=Oswald&family=Oooh+Baby&family=Poppins&family=Roboto:ital,wght@1,100family=Roboto&display=swap">
+</head>
+<body>
+    <div class="all">
+        <div class="container">
+            <div class="side">
+             
+            </div>
+
+            <div id="dashboard">
+                {% include 'authenticator/navigation.html' %}
+                <h1 class="dashH1">Book A service</h1>
+                <div class="dash-container">
+                    <div class="dash">
+                        <div class="sect1">
+                            <div class="head">Accident Report</div>
+                            <!-- Form Section -->
+                            <form method="POST">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <button type="submit">Book Service</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                {% include 'footer.html' %}
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>

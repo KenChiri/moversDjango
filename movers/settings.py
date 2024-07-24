@@ -39,7 +39,7 @@ SECRET_KEY = 'django-insecure-sutzuto*ot15ie$qlwky%kk#4cjtg#@u!oww=fclhddg1k=*2t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://eminently-rare-pegasus.ngrok-free.app','eminently-rare-pegasus.ngrok-free.app']
 
 
 # Application definition
@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'authenticate',
     'moverhome',
-    'reviews'
+    'reviews','booking'
 ]
 
 MIDDLEWARE = [

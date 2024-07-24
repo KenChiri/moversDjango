@@ -26,21 +26,21 @@ def signup(request):
 
         if password != password_repeat:
             messages.error(request, "Passwords do not match")
-            return render(request, 'authenticator/signup.html')
+            return render(request, 'authenticator/signUp.html')
 
         if not username.isalnum():
             messages.error(request, "Username should be alphanumeric")
-            return render(request, 'authenticator/signup.html')
+            return render(request, 'authenticator/signUp.html')
 
         User = get_user_model()
         
         if User.objects.filter(username=username).exists():
             messages.error(request, "Username already exists")
-            return render(request, 'authenticator/signup.html')
+            return render(request, 'authenticator/signUp.html')
 
         if User.objects.filter(email=email).exists():
             messages.error(request, "Email already registered")
-            return render(request, 'authenticator/signup.html')
+            return render(request, 'authenticator/signUp.html')
 
         user = User.objects.create_user(username=username, email=email, password=password)
         user.first_name = firstname
@@ -68,7 +68,7 @@ def signup(request):
         email.send()
         return redirect('login')
 
-    return render(request, "authenticator/signup.html")
+    return render(request, "authenticator/signUp.html")
 
 
 def activate(request, uidb64, token):

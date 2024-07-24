@@ -18,6 +18,7 @@
                 <li id="abtUs">About Us</li>
                 <li>Support</li>
                 <li>Contact Us</li>
+                <li><a href={% url 'login' %}>Login</a></li>
             </ul>
         </nav>
         <div class="welcome">
@@ -25,7 +26,11 @@
                 <div class="content" data-aos="fade-right" data-aos-delay="100">
                     <h1 class="word">Welcome to <a href="" class="accu">Movers</a> , <br> make moving easy and fast with our <br>
                     proffessional team. Leave it to us.</h1>
-                    <button type="submit" id="startMov">Start Moving <i class="fa-solid fa-phone-flip"></i></button> <button type="submit" name="getAppointment" id="toggleFormButton">Book Now</button>
+                    <button type="submit" id="startMov">Start Moving <i class="fa-solid fa-phone-flip"></i></button>
+                    <form action={% url 'book_service' %} method="post">
+                        {% csrf_token %}
+                        <button type="submit" id="startMov" id="toggleFormButton"> Book<i class="fa-solid fa-phone-flip"></i></button>
+                    </form>
                 </div>
       
 
