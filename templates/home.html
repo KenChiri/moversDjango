@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movers Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="{% static 'css/infostyles.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+       /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1c1b1b;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #666;
+    border-radius: 5px;
+}
+
+.banner {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    text-align: center;
+    background-color: black;
+    margin: 0;
+}
+
+.banner img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    height:auto;
+    width:auto;
+    zoom: 1;
+    object-fit: cover;
+}
+
+.welcome {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.welcome h1 {
+    font-size: 3em;
+    color: #1c1b1b;
+}
+
+.welcome p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.welcome a {
+    background-color: #0a0909;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.welcome a:hover {
+    background-color: #666;
+}
+
+.userpage {
+    padding: 50px 20px;
+}
+
+.userTitle {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.userTitle .lh {
+    font-size: 2em;
+    color: #4CAF50;
+}
+
+.userTitle .dh {
+    font-size: 2.5em;
+    color: #1c1b1b;
+}
+
+.themes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.themes div {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.themes div:hover {
+    transform: translateY(-10px);
+}
+
+.themes img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.info {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-media {
+    margin-top: 10px;
+}
+
+footer .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+footer .social-media a:hover {
+    color: #4CAF50;
+}
+
+    </style>
+  </head>
+  <body>
+    <img src="ALDN1730.GIF"Banner>
+    <header>
+      <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="contact us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="welcome" class="welcome">
+        <div class="container">
+            <div class="content" data-aos="fade-right" data-aos-delay="100">
+                <h1 class="word">Welcome to <a href="#" class="accu">Movers</a>,<br> make moving easy and fast with our <br> professional team. Leave it to us.</h1>
+                <button type="submit" id="startMov">Start Moving <i class="fa-solid fa-phone-flip"></i></button>
+                <button type="submit" name="getAppointment" id="toggleFormButton">Book Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="userpage">
+        <div class="userTitle" data-aos="fade-up" data-aos-delay="150">
+            <span class="lh">WELCOME ALL</span> <br>
+            <span class="dh">OUR SERVICES</span> <br>
+        </div>
+        <div class="themes">
+            <div class="up1" data-aos="fade-up" data-aos-delay="200">
+                <h2>Home Cleaning</h2>
+                <p>We provide top-notch home cleaning services to make your house spotless.</p>
+                <img src="IMG_7811.JPG" alt="Home Cleaning" class="service-img">
+            </div>
+            <div class="up2" data-aos="fade-up" data-aos-delay="250">
+                <h3>Install Appliances</h2>
+                <p>Our team can help you install and set up your home appliances quickly and safely.</p>
+                <img src="IMG_7812.JPG" alt="Install Appliances" class="service-img">
+            </div>
+            <div class="up3" data-aos="fade-up" data-aos-delay="300">
+                <h4>Other Goods Pickups</h2>
+                <p>We offer pickup services for various goods, ensuring they reach their destination safely.</p>
+                <img src="IMG_7813.JPG" alt="Goods Pickup" class="service-img">
+            </div>
+            <div class="up4" data-aos="fade-up" data-aos-delay="350">
+                <h5>Home Design</h2>
+                <p>Our professional designers can help you redesign and decorate your home.</p>
+                <img src="IMG_7814.JPG" alt="Home Design" class="service-img">
+            </div>
+            <div class="up5" data-aos="fade-up" data-aos-delay="400">
+                <h6>Emergency Moving</h2>
+                <p>Need to move urgently? We offer emergency moving services to help you out.</p>
+                <img src="IMG_7815.JPG" alt="Emergency Moving" class="service-img">
+            </div>
+            <div class="up6" data-aos="fade-up" data-aos-delay="450">
+                <h7>Bookings and Selections</h2>
+                <p>Book our services online and select the ones that suit your needs.</p>
+                <img src="IMG_7805.JPG" alt="Bookings" class="service-img">
+            </div>
+        </div>
+    </div>
+    <div class="info" id="emergencyInfoSection">
+        <div class="contactInfo" data-aos="fade-up" data-aos-delay="200">
+            <h2>Emergency Information</h2>
+            <p>If you need urgent assistance, please call our emergency hotline at <strong>123-456-7890</strong>.</p>
+        </div>
+    </div>
+    <footer id="footer" class="footer">
+        <p>&copy; 2024 Movers. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#" class="fab fa-facebook"></a>
+<a href="#" class="fab fa-twitter"></a>
+<a href="#" class="fab fa-instagram"></a>
+<a href="#" class="fab fa-linkedin"></a>
+
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>
+
+   
