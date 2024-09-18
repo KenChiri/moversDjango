@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Movers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="{% static 'css/aboutstyles.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #1c1b1b;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #666;
+    border-radius: 5px;
+}
+
+.about-us {
+    padding: 80px 20px 50px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #1c1b1b;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #1c1b1b;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-img, .team-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.our-mission, .our-values, .our-team {
+    margin-bottom: 40px;
+}
+
+.our-values .value-item {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.our-team .team-member {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-media {
+    margin-top: 10px;
+}
+
+footer .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+footer .social-media a:hover {
+    color: #4CAF50;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="contact us.html">Contact Us</a></li>   
+            </ul>
+        </nav>
+    </header>
+
+    <div id="aboutUs" class="about-us">
+        <div class="container">
+            <h1>About Us</h1>
+            <section class="our-mission">
+                <h2>Our Mission</h2>
+                <p>At Movers, our mission is to provide seamless and efficient moving solutions tailored to your needs. We understand that moving can be a daunting task, which is why we are dedicated to making your experience as smooth and stress-free as possible. Our professional team is committed to delivering high-quality services with a focus on reliability, safety, and customer satisfaction.</p>
+                <img src="IMG_7806.JPG" alt="Our Mission" class="about-img">
+            </section>
+
+            <section class="our-values">
+                <h2>Our Values</h2>
+                <div class="value-item" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Customer-Centric Approach</h3>
+                    <p>We prioritize our customers' needs and work diligently to exceed their expectations. Your satisfaction is our top priority.</p>
+                </div>
+                <div class="value-item" data-aos="fade-up" data-aos-delay="150">
+                    <h3>Integrity</h3>
+                    <p>We operate with transparency and honesty, ensuring that our services and business practices are conducted with the highest level of integrity.</p>
+                </div>
+                <div class="value-item" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Excellence</h3>
+                    <p>Our commitment to excellence drives us to continuously improve and innovate. We strive for the highest standards in every aspect of our service.</p>
+                </div>
+                <div class="value-item" data-aos="fade-up" data-aos-delay="250">
+                    <h3>Teamwork</h3>
+                    <p>We believe in the power of teamwork. Our skilled professionals collaborate to deliver exceptional results and ensure a smooth moving experience.</p>
+                </div>
+            </section>
+
+            <section class="our-team">
+                <h2>Meet Our Team</h2>
+                <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+                    <img src="IMG_7826.JPG" alt="Team Member 1" class="team-img">
+                    <h3>John Doe</h3>
+                    <p>Founder & CEO</p>
+                    <p>With over 10 years in the moving industry, John leads our team with passion and expertise. His vision is to revolutionize the moving experience for our customers.</p>
+                </div>
+                <div class="team-member" data-aos="fade-up" data-aos-delay="350">
+                    <img src="IMG_7825.JPG" alt="Team Member 2" class="team-img">
+                    <h3>Jane Smith</h3>
+                    <p>Operations Manager</p>
+                    <p>Jane oversees daily operations and ensures everything runs smoothly. Her attention to detail and organizational skills keep our services efficient and reliable.</p>
+                </div>
+                <div class="team-member" data-aos="fade-up" data-aos-delay="400">
+                    <img src="IMG_7824.JPG" alt="Team Member 3" class="team-img">
+                    <h3>Emily Johnson</h3>
+                    <p>Customer Service Lead</p>
+                    <p>Emily is dedicated to providing outstanding customer service. She addresses inquiries, resolves issues, and ensures our customers have a positive experience.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer id="footer" class="footer">
+        <p>&copy; 2024 Movers. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#" class="fab fa-facebook"></a>
+<a href="#" class="fab fa-twitter"></a>
+<a href="#" class="fab fa-instagram"></a>
+<a href="#" class="fab fa-linkedin"></a>
+
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>

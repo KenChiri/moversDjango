@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movers Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="{% static 'css/infostyles.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #e9ecef;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+ul li strong {
+    color: #4CAF50;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.community-intro, .community-tips, .community-stories, .community-events, .community-forum, .community-feedback {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.community-stories .story {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.community-stories .story-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.community-events ul li {
+    display: flex;
+    align-items: center;
+}
+
+.community-events ul li::before {
+    content: '\f073';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #4CAF50;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+    </style>
+    </head>
+    <body>
+        <img src="community-text-button-speech-bubble-community-colorful-web-banner-illustration-vector.jpg"Banner>
+        <header>
+      <nav>
+        <ul>
+        <li><a href="home.html">Home</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="contact us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+  </header>
+       
+<section id="community-intro" class="community-intro">
+    <div class="container">
+        <h2>Welcome to the Movers Community</h2>
+        <p>At Movers, we believe that moving is more than just transporting belongings from one place to another. It’s about creating new beginnings and building communities. Our Movers Community page is designed to bring together our clients, partners, and supporters to share experiences, tips, and stories about moving and settling into new spaces. Whether you're looking for advice, support, or simply want to connect with others, our community is here for you.</p>
+    </div>
+</section>
+
+<section id="community-tips" class="community-tips">
+    <div class="container">
+        <h2>Moving Tips and Tricks</h2>
+        <p>Moving can be a daunting task, but with the right tips and tricks, it can become a manageable and even enjoyable process. Our community members share their best moving hacks, from efficient packing methods to settling into your new home. Here are some of our top tips:</p>
+        <ul>
+            <li><strong>Start Early:</strong> Begin packing well in advance to avoid last-minute stress.</li>
+            <li><strong>Declutter:</strong> Take the opportunity to get rid of items you no longer need.</li>
+            <li><strong>Label Boxes:</strong> Clearly label each box with its contents and the room it belongs to.</li>
+            <li><strong>Pack an Essentials Bag:</strong> Keep a bag with essentials like toiletries, clothes, and important documents.</li>
+            <li><strong>Hire Professional Movers:</strong> Let professionals handle the heavy lifting and transportation.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="community-stories" class="community-stories">
+    <div class="container">
+        <h2>Customer Stories</h2>
+        <p>Our customers have amazing stories to tell about their moving experiences. From families moving into their dream homes to businesses expanding to new locations, our community is full of inspiring journeys. Here are a few of their stories:</p>
+        <div class="story" data-aos="fade-up" data-aos-delay="200">
+            <img src="IMG_7816.JPG" alt="Jane's Seamless Move" class="story-img">
+            <h3>Jane's Seamless Move</h3>
+            <p>"Movers made our relocation a breeze. Their team was professional, efficient, and friendly. I highly recommend their services!" - Jane Doe</p>
+        </div>
+        <div class="story" data-aos="fade-up" data-aos-delay="250">
+            <img src="{IMG_7822.JPG}" alt="John's Stress-Free Office Move" class="story-img">
+            <h3>John's Stress-Free Office Move</h3>
+            <p>"Moving our office was a daunting task, but Movers handled everything with great care. The process was smooth and stress-free." - John Smith</p>
+        </div>
+        <div class="story" data-aos="fade-up" data-aos-delay="300">
+            <img src="{IMG_7821.JPG}" alt="Mary's Last-Minute Move" class="story-img">
+            <h3>Mary's Last-Minute Move</h3>
+            <p>"Their emergency moving service saved the day for us. Movers were quick to respond and helped us move on very short notice." - Mary Johnson</p>
+        </div>
+    </div>
+</section>
+
+<section id="community-events" class="community-events">
+    <div class="container">
+        <h2>Upcoming Events</h2>
+        <p>Stay connected with our community through various events and meetups. We host a range of activities, from moving workshops to community gatherings. Check out our upcoming events and join us to learn, share, and connect:</p>
+        <ul>
+            <li><strong>Moving Workshop:</strong> Learn packing and moving techniques from the pros. Date: August 15, 2024</li>
+            <li><strong>Community Meetup:</strong> Connect with other Movers community members. Date: September 5, 2024</li>
+            <li><strong>Charity Drive:</strong> Donate items to help those in need. Date: October 10, 2024</li>
+        </ul>
+    </div>
+</section>
+
+<section id="community-forum" class="community-forum">
+    <div class="container">
+        <h2>Join the Conversation</h2>
+        <p>Our online forum is the perfect place to ask questions, share advice, and connect with others. Whether you need moving tips, want to share your story, or just want to chat, our community is here to support you. Join the conversation today and become part of the Movers family.</p>
+        <button type="button" onclick="window.location.href='/forum'">Visit Our Forum</button>
+    </div>
+</section>
+
+<section id="community-feedback" class="community-feedback">
+    <div class="container">
+        <h2>Feedback and Suggestions</h2>
+        <p>We value your feedback and suggestions. Help us improve our services and community by sharing your thoughts with us. Your input is invaluable in making Movers the best it can be.</p>
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+    </body>
+
+
+
