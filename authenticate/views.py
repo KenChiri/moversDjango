@@ -12,6 +12,8 @@ from django.contrib.auth.tokens import default_token_generator
 from django.http import HttpRequest
 from movers import settings
 from .tokens import generate_token
+from django.contrib.messages import success
+from authenticate.models import CustomUser
 
 # Create your views here.
 
@@ -24,35 +26,40 @@ def signup(request):
         password = request.POST.get("pwd")
         password_repeat = request.POST.get("pwdRepeat")
 
-        if password != password_repeat:
-            messages.error(request, "Passwords do not match")
-            return render(request, 'authenticator/signup.html')
 
-        if not username.isalnum():
-            messages.error(request, "Username should be alphanumeric")
-            return render(request, 'authenticator/signup.html')
+        try:
+            user = CustomUser.objects.create_user(username=username, email=email, password=password)
+            user.first_name = firstname
+            user.last_name = lastname
+            user.is_active = False
+            user.save()
 
-        User = get_user_model()
-        
-        if User.objects.filter(username=username).exists():
-            messages.error(request, "Username already exists")
-            return render(request, 'authenticator/signup.html')
+        except:
+            if password != password_repeat:
+                messages.error(request, "Passwords do not match")
+                return render(request, 'authenticator/signup.html')
 
-        if User.objects.filter(email=email).exists():
-            messages.error(request, "Email already registered")
-            return render(request, 'authenticator/signup.html')
+            if not username.isalnum():
+                messages.error(request, "Username should be alphanumeric")
+                return render(request, 'authenticator/signup.html')
 
-        user = User.objects.create_user(username=username, email=email, password=password)
-        user.first_name = firstname
-        user.last_name = lastname
-        user.is_active = False
-        user.save()
+            
+            if CustomUser.objects.filter(username=username).exists():
+                messages.error(request, "Username already exists")
+                return render(request, 'authenticator/signup.html')
 
-        messages.success(request, "Your account was created successfully. We will send you an email for activation.")
+            if CustomUser.objects.filter(email=email).exists():
+                messages.error(request, "Email already registered")
+                return render(request, 'authenticator/signup.html')
 
+        success(request, "Your Account created Successully.  We will send you an Email for Activation")
+
+        #take him to the login page is the signup is successfull
         subject = "Welcome to MOVERS."
-        message = f"Hello {user.first_name},\n\Thank you for visiting our website. We have sent you a confirmation email, please confirm that this is your email address.\n\nThank You\nTeam MOVERS"
-        send_mail(subject, message, settings.EMAIL_HOST_USER, [user.email], fail_silently=True)
+        message = "Hello" + user.first_name + "\n" + "Thank you for visiting our website. We have sent you a confirmation email, please confirm that this is your email address.\n\nThank You\nTeam MOVERS"
+        from_email = settings.EMAIL_HOST_USER
+        to_list = [user.email]
+        send_mail(subject, message, from_email, to_list, fail_silently=True)
 
         current_site = get_current_site(request)
         email_subject = "Confirm your Email @ AccuReport - Login"

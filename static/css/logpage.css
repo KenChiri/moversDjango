@@ -15,7 +15,7 @@
             text-decoration: wavy;
             color: rgb(142, 182, 189);
         }
-        #step1, #step2, #step3, #step4 {
+        #step1 {
             display: flex;
             justify-content: center;
             min-height: 550pt;
@@ -34,13 +34,12 @@
             justify-content: center;
             background-color: rgb(7, 10, 14);
             width: auto;
-            height: 350pt;
+            min-height: 550pt;
             padding: 20px;
             color: rgb(142, 182, 189);
             opacity: 0.9;
             font-family: 'Lexend', sans-serif;
             padding-left: 30px;
-            border-radius: 50px;
         }
         button {
             background-color: rgb(0, 90, 35);
