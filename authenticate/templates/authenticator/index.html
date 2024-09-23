@@ -4,59 +4,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AccuReport </title>
+    <title>AccuReport</title>
+    
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <!-- Your custom styles -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
     <div class="all">
         <div class="container">
-            <div class="side">
-                <div class="logo"><img class="logos" src="{% static 'css/photos/' %}" alt="Movers Logo">  <h3>Movers<br> <div class="motto">Associations</div> </h3></div>
-                    <h2>Movers Dashboard</h2>
-                    <ul class="rec">
-                        <li><a href="#" >Dashboard</a></li>
-                        <li><a href="#"  >Drivers</a></li>
-                        <li><a href="#" >Services</a></li>
-                    </ul>
-                    
-            </div>
-            <!-- THis is the Main page the body -->
-                <div id="dashboard">
-                    {% include 'authenticator/navigation.html' %}
-        
-                    <br>
-                    <h1 class="dashH1">Manage Accident Files</h1>
-                    <div class="dash-container">
+           
 
-                        <div class="dash">
-                            
-                            <br>
-                            <div class="sect1">
-                                
-                               
-                                
-
-                              
-
-
+            <!-- Main Content -->
+            <div id="dashboard">
+                {% include 'authenticator/navigation.html' %}
+                <br>
+                <h1 class="dashH1">Manage Bookings</h1>
+                
+                <!-- Bootstrap Tabs -->
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="accident-tab" data-bs-toggle="tab" data-bs-target="#accident" type="button" role="tab" aria-controls="accident" aria-selected="true">Bookings</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="drivers-tab" data-bs-toggle="tab" data-bs-target="#drivers" type="button" role="tab" aria-controls="drivers" aria-selected="false">Drivers</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="services-tab" data-bs-toggle="tab" data-bs-target="#services" type="button" role="tab" aria-controls="services" aria-selected="false">Services</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <!-- Accident Files Tab -->
+                    <div class="tab-pane fade show active" id="accident" role="tabpanel" aria-labelledby="accident-tab">
+                        <br>
+                        <h2>Bookings</h2>
+                        <div class="dash-container">
+                            <div class="dash">
+                                <div class="sect1">
+                                    {% for book in bookings %}
+                                    {{ book }}
+                                    {% endfor %}
+                                </div>
                             </div>
-    
-
                         </div>
                     </div>
-                   
-                    </div>
-                    {% include 'footer.html' %}
-           
-                </div>
-              
-                 <!-- THis is the main page for the medical report -->
-               
-               
-        </div>
-     </div>
-     <script src="{% static 'js/index.js' %}"></script> 
-</body>
 
+                    <!-- Drivers Tab -->
+                    <div class="tab-pane fade" id="drivers" role="tabpanel" aria-labelledby="drivers-tab">
+                        <br>
+                        <h2>Drivers</h2>
+                        <div class="dash-container">
+                            <div class="dash">
+                                <!-- Content for drivers goes here -->
+                                {% for driver in drivers %}
+                                {{ driver }}
+                                {% endfor %}
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Services Tab -->
+                    <div class="tab-pane fade" id="services" role="tabpanel" aria-labelledby="services-tab">
+                        <br>
+                        <h2>Vehicles</h2>
+                        <div class="dash-container">
+                            <div class="dash">
+                                <!-- Content for services goes here -->
+                                {% for vehicle in vehicles %}
+                                {{ vehicle }}
+                                {% endfor %}
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% include 'footer.html' %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Your custom script -->
+    <script src="{% static 'js/index.js' %}"></script> 
+</body>
 </html>
