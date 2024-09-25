@@ -15,7 +15,7 @@ from movers import settings
 from .tokens import generate_token
 from django.contrib.messages import success
 from authenticate.models import CustomUser
-
+from booking.models import *
 # Create your views here.
 
 def signup(request):
@@ -142,7 +142,10 @@ def index(request):
         return redirect('login')
 
     fname = request.session['fname']
-    return render(request, "authenticator/index.html", {'fname': fname})
+    bookings=ServiceBooking.objects.all()
+    drivers=Driver.objects.all()
+    vehicles=Vehicle.objects.all()
+    return render(request, "authenticator/index.html", {'fname': fname,'bookings':bookings,'vehicles':vehicles,'drivers':drivers})
 
 
 def user_logout(request):
