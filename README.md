@@ -11,9 +11,11 @@ TECHNOLOGIES USED
 
 Backend: Django (Python web framework)
 Frontend: HTML, CSS, JavaScript
-Database: [Specify your database, e.g., SQLite, PostgreSQL]
+Database: sqlite3
 
-SETUP AND INSTALLATION
+SETUP AND INSTALLATION 
+This was used for the  project setup and installation:
+
 
 Clone the repository:
 git clone [your-repository-url]
@@ -37,5 +39,10 @@ Start the development server:
 python manage.py runserver
 Open a web browser and navigate to http://localhost:8000
 
-USAGE
+USAGE 
+After all these  steps, you can use the application by following these steps: 
+Once hosted the website will be live to the public to allow them to request for moving  services. The customer can browse through the available services and place an order. The moving company can manage.
+This is an overview of the homepage:
+![homepage](static/img/Screenshot%202024-09-25%20173447.png) 
+This is the company webpage, it is used to display all the services to the users.
 
