@@ -31,19 +31,19 @@ def signup(request):
         # Validation logic BEFORE user creation
         if password != password_repeat:
             messages.error(request, "Passwords do not match")
-            return render(request, 'authenticator/signup.html')
+            return render(request, 'authenticator/signUp.html')
 
         if not username.isalnum():
             messages.error(request, "Username should be alphanumeric")
-            return render(request, 'authenticator/signup.html')
+            return render(request, 'authenticator/signUp.html')
 
         if CustomUser.objects.filter(username=username).exists():
             messages.error(request, "Username already exists")
-            return render(request, 'authenticator/signup.html')
+            return render(request, 'authenticator/signUp.html')
 
         if CustomUser.objects.filter(email=email).exists():
             messages.error(request, "Email already registered")
-            return render(request, 'authenticator/signup.html')
+            return render(request, 'authenticator/signUp.html')
 
         try:
             # Create the user after validation
@@ -57,7 +57,7 @@ def signup(request):
 
         except Exception as e:
             messages.error(request, "An error occurred during registration. Please try again.")
-            return render(request, 'authenticator/signup.html')
+            return render(request, 'authenticator/signUp.html')
 
         success(request, "Your Account created Successully.  We will send you an Email for Activation")
 
@@ -86,7 +86,7 @@ def signup(request):
 
         return redirect('signup')
 
-    return render(request, "authenticator/signup.html")
+    return render(request, "authenticator/signUp.html")
 
 
 def activate(request, uidb64, token):
