@@ -53,7 +53,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'authenticate',
     'moverhome',
-    'reviews','booking'
+    'reviews',
+    'booking',
 ]
 
 MIDDLEWARE = [

@@ -34,7 +34,7 @@ nav ul li {
     font-family: 'poppins', 'sans-serif'
 }
 nav li:hover {
-    border-bottom: 2px solid rgb(212, 6, 6);
+    border-bottom: 2px solid rgb(35, 131, 72);
 }
 .welcome {
     text-align: center;
@@ -272,6 +272,7 @@ button:hover {
     color: aliceblue;
     padding: 10px;
     padding-top: 50px;
+    text-align: left;
 
   }
   #aboutUs {

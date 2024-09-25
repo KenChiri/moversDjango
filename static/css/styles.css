@@ -10,7 +10,7 @@ body {
     height: 100%;
 }
 nav {
-    background-color: #dce1e7;
+    background-color: #dce7e0;
     z-index: 2;
     width: 100%;
 }
@@ -30,7 +30,7 @@ nav li:not(.exclude):hover {
 
 /* Logout styles*/
 #logout {
-    background-color: #d7c927;
+    background-color: rgb(0, 90, 35);
     border-radius: 2px;
     border: 1px solid #dce1e7;
     
@@ -45,7 +45,7 @@ nav li:not(.exclude):hover {
     padding-left: 0;
 }
 .sesh_name a {
-    color: #033f88;
+    color: #94f0a8;
 }
 .container {
     height: 100%;
@@ -59,7 +59,7 @@ nav li:not(.exclude):hover {
     width: 170pt;
     height: 100%;
     padding: 5pt;
-    background-color: #071e3a;
+    background-color: #083a07;
     position: fixed;
     overflow-y: scroll;
 }
