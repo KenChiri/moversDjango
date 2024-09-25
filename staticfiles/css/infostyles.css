@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Amita&family=Bubblegum+Sans&family=Caveat:wght@400;500&family=Lexend:wght@500&family=Oswald&family=Oooh+Baby&family=Poppins&family=Roboto:ital,wght@1,100&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, rgb(241, 250, 250), rgb(167, 173, 175));
+    opacity: 1;
+
+}
+.all {
+    display: flex;
+    flex-direction: column;
+
+}
+nav {
+    position: fixed;
+    z-index: 2;
+    margin-bottom: 36pt;
+    width: 100%;
+}
+.navbar {
+    background-color: rgb(1, 6, 16);
+}
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    min-height: 36pt;
+}
+nav ul li {
+    display: inline-block;
+    color: aliceblue;;
+    padding: 10pt;
+    font-family: 'poppins', 'sans-serif'
+}
+nav li:hover {
+    border-bottom: 2px solid rgb(35, 131, 72);
+}
+.welcome {
+    text-align: center;
+    --bg-imge: url("photos/pexels-artempodrez-5025669.jpg");
+    --bg-image-opacity: 0.2;
+    background-color: rgb(0, 18, 32);
+    background-repeat: no-repeat;
+    max-height: 900pt;
+    padding-top: 30pt;
+    isolation: isolate;
+    position: relative;
+    border-radius: 0pt 0pt 20pt 20pt;
+    box-shadow: 0 0 10px rgba(0,0,0,.20);
+    flex-direction: row;
+    font-family: 'poppins', 'sans-serif';
+}
+.welcome::after {
+    content: '';
+    position: absolute;
+    max-height: 900pt;
+    inset: 0;
+    z-index: -1;
+    background-size: cover;
+    background-image: var(--bg-imge);
+    opacity: var(--bg-image-opacity);
+    border-radius: 0pt 0pt 20pt 20pt;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20pt;
+    padding: 40pt;
+    padding-top: 80pt;
+}
+.content {
+    align-self: first baseline;
+    height: 280pt;
+}
+.content h1 {
+    color: aliceblue;
+    font-size: 2.3em;
+    padding-top: 10pt;
+
+    
+}
+
+.userpage {
+    padding: 50px 20px;
+}
+
+.userTitle {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.userTitle .lh {
+    font-size: 2em;
+    color: #4CAF50;
+}
+
+.userTitle .dh {
+    font-size: 2.5em;
+    color: #1c1b1b;
+}
+
+.themes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.themes div {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.themes div:hover {
+    transform: translateY(-10px);
+}
+
+.themes img {
+    width: 100%;
+    height: 200pt;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.lh {
+    color: gray;
+    font-family: 'poppins', 'sans-serif';
+    font-size: 1.8em;
+    text-align: center;
+    display: block;
+}
+.dh {
+    color: black;
+    font-family: 'poppins', 'sans-serif';
+    font-size: 2.8em;
+    text-align: center;
+    display: block;
+
+}
+.userTitle {
+    padding-top: 10pt;
+}
+h2 {
+    text-transform: uppercase;
+    font-family: 'poppins', 'sans-serif';
+    font-size: 1.3em;
+
+}
+
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+
+
+
+button {
+    height: 30pt;
+    padding: 8pt;
+    border-radius: 5pt;
+    font-weight: bold;
+    background-color: rgb(35, 131, 72);
+    margin: 4pt;
+    border: 1px solid black;
+    color: aliceblue;
+}
+button:hover {
+    cursor: pointer;
+    border: 1px solid rgb(175, 237, 43);
+}
+
+
+.bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cast {
+    height: 300pt;
+    background-color: rgb(16, 20, 28);
+    margin-bottom: 0;
+
+}
+.top-cast {
+    display: flex;
+    color: rgba(196, 218, 237, 0.732);
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10pt;
+    font-size: 0.8em;
+}
+.top-cast h1 {
+    font-size: 1.4em;
+    color: rgb(215, 233, 249);
+}
+.foot {
+    height: 60pt;
+    background-color: rgb(14, 29, 48);
+
+}
+
+.foot_nav li {
+    color: rgba(215, 233, 249, 0.864);
+    padding: 10pt;
+}
+.foot_nav {
+    list-style-type: none;
+    display: flex;
+}
+.space {
+    width: 350pt;
+}
+
+
+
+
+/* Green color for success messages */
+  .message {
+    color: rgb(4, 160, 4);
+    background-color: #98c894;
+    border-left:5px solid rgb(4, 160, 4);
+    padding-top: 10px;
+    padding: 10pt;
+  }
+  
+
+
+
+
+  
+  
+
+
+
+  .motto {
+    font-style: italic;
+    width: 250pt;
+    font-size: 0.9em;
+
+  }
+
+
+  .info {
+    height: 400pt;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row;
+    justify-content: flex-end; /* Align elements to the right */
+    gap: 250pt;
+    background-color: rgb(23, 26, 32);
+    margin: 30pt;
+    border-radius: 10pt;
+    padding: 20pt;
+    box-shadow: 0 0 10px rgba(0,0,0,.20);
+
+    
+  }
+  .contactInfo {
+    font-family: 'poppins', 'sans-serif';
+    color: aliceblue;
+    padding: 10px;
+    padding-top: 50px;
+    text-align: left;
+
+  }
+  #aboutUs {
+    height: 300pt;
+    margin: 30pt;
+    border-radius: 10pt;
+    padding: 20pt;
+    background-color: rgb(210, 213, 215);
+    box-shadow: 0 0 10px rgba(0,0,0,.20);
+  }
+ 
+  
+
+
+.fot {
+    display: flex;
+}
+
+.fot i {
+    align-self: center;
+    padding: 10px;
+    font-size: 1.8em;
+    color: #d7c927;
+}
+
+@media all and (max-width: 1080px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        min-height: auto;
+        align-self: center;
+        text-align: center;
+    }
+    .userpage {
+        height: 450pt;
+    }
+}

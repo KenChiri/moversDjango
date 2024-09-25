@@ -10,6 +10,6 @@ urlpatterns = [
     path('support/', views.support, name='support'),
     path('contact/', views.contactus, name='contact'),
     path('about/', views.aboutus, name='about'),
-    path('home/', views.homepage, name='home'),
-    path('',include('booking.urls')),
+    path('', views.homepage, name='home'),
+    path('bookings',include('booking.urls')),
 ]

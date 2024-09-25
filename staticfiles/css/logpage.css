@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Amita&family=Bubblegum+Sans&family=Caveat:wght@400;500&family=Lexend:wght@500&family=Oswald&family=Oooh+Baby&family=Poppins&family=Roboto:ital,wght@1,100&display=swap');
+
+        body {
+            background-color: rgb(28, 34, 35);
+            opacity: 0.9;
+            margin: 0;
+            padding: 0;
+        }
+        .welcome {
+            font-family: 'Lexend', sans-serif;
+            text-align: center;
+            font-size: 4em;
+            padding: 0;
+            font-weight: 700;
+            text-decoration: wavy;
+            color: rgb(142, 182, 189);
+        }
+        #step1 {
+            display: flex;
+            justify-content: center;
+            min-height: 550pt;
+            background-image: linear-gradient(to top right, rgb(98, 165, 102), rgb(224, 243, 228));
+            width: 40%;
+            font-size: 1.2em;
+            padding: 2%;
+            font-weight: 200;
+            opacity: 0.8;
+            color: rgb(1, 20, 15);
+            text-align: left;
+            font-family: 'Lexend', sans-serif;
+        }
+        .signin {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(to top right, rgb(98, 165, 102), rgb(224, 243, 228));
+            width: 40%;
+            text-align: left;
+            font-size: 1.2em;
+            min-height: 550pt;
+            padding: 2%;
+            color: rgb(0, 0, 0);
+            font-family: 'Lexend', sans-serif;
+        }
+        button {
+            background-color: rgb(0, 90, 35);
+            border-radius: 20px;
+            padding: 15px;
+            width: 200px;
+            opacity: 1;
+            text-align: center;
+            color: aliceblue;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: rgb(43, 69, 69);
+            
+        }
+        .container {
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+        .main {
+            background-image: url("photos/markus-spiske-RWTUrJf7I5w-unsplash.jpg");
+        }
+        .main {
+            --bg-image-opacity: 0.1;
+            position: relative;
+            font-family: 'Lexend', sans-serif;
+            background-color: rgba(9, 39, 22, var(--bg-image-opacity)); 
+            background-position: center;
+
+        }
+        .main:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background-image: url("photos/markus-spiske-RWTUrJf7I5w-unsplash.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: var(--bg-image-opacity);
+        } 
+        .signin input[type="text"],
+        .signin input[type="email"],
+        .signin input[type="password"] {
+            width: 300px;
+            height: 30px;
+            background-color: rgb(198, 241, 212);
+            color: rgb(0, 0, 0);
+            border: 2px solid black;
+           
+        }
+        #step1 input[type="text"],
+        #step1 input[type="email"],
+        #step1 input[type="password"] {
+            width: 300px;
+            height: 30px;
+            background-color: rgb(198, 241, 212);
+            color: rgb(0, 0, 0);
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+
+        .signin input[type="text"]:hover,
+        .signin input[type="email"]:hover,
+        .signin input[type="password"]:hover,
+        #step1 input[type="text"]:hover,
+        #step1 input[type="email"]:hover,
+        #step1 input[type="password"]:hover {
+            border: 2px solid rgb(4, 81, 157);
+        }
+
+
+        a {
+            text-align: right;
+            text-decoration: none;
+            color: rgb(35, 131, 72);
+        }
+        a:hover {
+            color: rgb(1, 7, 102);
+        }
+        .slideshow {
+            --bg-image-opacity: 0.4;
+            position: relative;
+            width: 60%;
+            font-family: 'Lexend', sans-serif;
+            background-color: rgba(9, 20, 22, var(--bg-image-opacity)); /* Apply opacity to the background color */
+        }
+        
+        .slideshow::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background-image: url("photos/markus-spiske-RWTUrJf7I5w-unsplash.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: var(--bg-image-opacity);
+        }
+        
+ .motto h1 {
+    color: aliceblue;
+    font-size: 2.8em;
+    text-align: center;
+    padding: 10px;
+ }
+
+    .signUp {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    p {
+        color: red;
+    }
+    
+
+   
+    footer {
+        width: 100%;
+        background-color: black;
+        height: 30px;
+        padding: 8px;
+        text-align: center;
+        color: whitesmoke;
+        margin: 0;
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px; /* Set the width of the scrollbar track */
+        
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: #271c25; /* Set the background color of the track */
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: #888585; /* Set the color of the thumb */
+        border-radius: 10px;
+        width: 10px; /* Set the width of the thumb to match the track */
+        height: 5px;
+      }
+
+
+      .main {
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        height: 500pt;
+      }
+  /* Error message styles*/
+  .error, .error-message {
+    color: #ff243a;
+    background-color: #3e2527;
+    border-left: 5px solid red;
+    padding: 10px;
+    display: none;
+  }
+
+  /* Red color for error messages */
+.alert-danger {
+    color: #ff243a;
+    background-color: #3e2527;
+    border-left: 5px solid red;
+    padding: 5px;
+}
+
+/* Green color for success messages */
+  .alert-success {
+    color: rgb(4, 160, 4);
+    background-color: #273e25;
+    border-left:5px solid rgb(4, 160, 4);
+    padding-top: 10px;
+  }
+
+@media all and (max-width: 1080px) {
+    .signUp {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    #step1 {
+        z-index: 1;
+        width: 400px;
+        margin: 40px;
+        border-radius: 10px;
+
+        
+    }
+    .motto h1 {
+        display: none;
+    }
+    
+}
